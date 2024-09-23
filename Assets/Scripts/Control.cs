@@ -25,6 +25,6 @@ public class Control : MonoBehaviour
         r = Input.GetAxis("Mouse X");
         Debug.Log("H:" + h.ToString() + "V:" + v.ToString());
         playerTr.Translate(new Vector3(h, 0, v) * moveSpeed * Time.deltaTime);
-    
+        playerTr.Rotate(new Vector3(0, r, 0) * rotationSpeed * Time.deltaTime);
     }
 }
