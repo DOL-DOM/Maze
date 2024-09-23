@@ -31,12 +31,12 @@ public class Control : MonoBehaviour
     }
     // 충돌 관리
     void OnTriggerEnter(Collider other){
+        
 
         if (other.tag == "Item"){ //충돌 오브젝트가 아이템일때
             
             itemCount++; // 점수 올리기 
             Debug.Log("아이템 개수: " + itemCount);
-            GetComponent<AudioSource>().Play(); // 사운드 재생 
 
         }
     

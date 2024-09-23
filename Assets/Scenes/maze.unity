@@ -943,7 +943,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f70ed603428cbd444b99216b2e540e70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerControl: {fileID: 732279176}
 --- !u!136 &381269975
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1230,7 +1229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f70ed603428cbd444b99216b2e540e70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerControl: {fileID: 732279176}
 --- !u!136 &621575517
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1388,7 +1386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7122a25058744de46b8d3381bc7ec85c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 826280199}
   itemCount: 0
 --- !u!4 &732279177
 Transform:
@@ -1791,8 +1789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e57f1eec5480d8a4cb54b27cd1630182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  successMessage: {fileID: 0}
-  TotalItemCount: 3
+  successMessage: {fileID: 1032677810}
   playerControl: {fileID: 732279176}
 --- !u!4 &826280200
 Transform:
@@ -2528,9 +2525,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e57f1eec5480d8a4cb54b27cd1630182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  successMessage: {fileID: 0}
-  TotalItemCount: 3
-  playerControl: {fileID: 0}
+  successMessage: {fileID: 1032677810}
+  playerControl: {fileID: 1098038037}
 --- !u!1 &1114910124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2653,7 +2649,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f70ed603428cbd444b99216b2e540e70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerControl: {fileID: 732279176}
 --- !u!136 &1195246660
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2691,7 +2686,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1221963087}
-  - component: {fileID: 1221963089}
   m_Layer: 0
   m_Name: Chocolates
   m_TagString: Untagged
@@ -2717,19 +2711,6 @@ Transform:
   - {fileID: 621575514}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1221963089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1221963086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70ed603428cbd444b99216b2e540e70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerControl: {fileID: 1098038037}
 --- !u!4 &1247987937 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3725707468629907753, guid: 3d9200d81175a46c89f8c1b896927fb5, type: 3}
@@ -5752,11 +5733,11 @@ SceneRoots:
   - {fileID: 179666700}
   - {fileID: 1639145310}
   - {fileID: 1393168787}
-  - {fileID: 1368773735}
   - {fileID: 1382847055}
   - {fileID: 817113151}
   - {fileID: 204753165}
   - {fileID: 263723951}
   - {fileID: 732279177}
   - {fileID: 826280200}
+  - {fileID: 1368773735}
   - {fileID: 1221963087}
