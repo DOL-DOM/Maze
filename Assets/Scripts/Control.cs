@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Control : MonoBehaviour
 {
+    public GameManagerLogic manager;
     private float h = 0.0f;
     private float v = 0.0f;
     private float r = 0.0f;
     private float moveSpeed = 10.0f;
     private float rotationSpeed = 100.0f;
     private Transform playerTr;
+    public int itemCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,7 @@ public class Control : MonoBehaviour
         playerTr = GetComponent<Transform>();
     }
 
-    // Update is called once per frame
+    // Update is called once per frame, 이동 및 회전
     void Update()
     {
         h = Input.GetAxis("Horizontal");
@@ -26,5 +28,17 @@ public class Control : MonoBehaviour
         Debug.Log("H:" + h.ToString() + "V:" + v.ToString());
         playerTr.Translate(new Vector3(h, 0, v) * moveSpeed * Time.deltaTime);
         playerTr.Rotate(new Vector3(0, r, 0) * rotationSpeed * Time.deltaTime);
+    }
+    // 충돌 관리
+    void OnTriggerEnter(Collider other){
+
+        if (other.tag == "Item"){ //충돌 오브젝트가 아이템일때
+            
+            itemCount++; // 점수 올리기 
+            Debug.Log("아이템 개수: " + itemCount);
+            GetComponent<AudioSource>().Play(); // 사운드 재생 
+
+        }
+    
     }
 }
