@@ -8,7 +8,8 @@ public class GameManagerLogic : MonoBehaviour
     public TextMeshProUGUI successMessage; // UI 텍스트를 참조하는 변수
     private bool gameEnded = false; // 게임 종료 여부 확인
     public Control playerControl; // Control 인스턴스를 참조하는 변수
-    
+       public GameObject finishPanel; // Finish 패널을 참조하는 변수
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class GameManagerLogic : MonoBehaviour
             return; // null인 경우 더 이상 진행하지 않음
         }
         successMessage.gameObject.SetActive(false); // 게임 시작 시 성공 메시지를 비활성화
+        finishPanel.SetActive(false); // 패널 비활성화
     }
   // 게임 성공을 처리하는 함수
     public void GameSuccess()
@@ -33,9 +35,15 @@ public class GameManagerLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-          if (playerControl.itemCount>=3)
+         // 슬라임 3개를 만났는지 체크
+        if (playerControl.itemCount >= 3 && !gameEnded)
         {
+            // 결승점에 도달했는지 체크
+            if (playerControl.itemCount >= 3 && playerControl.hasReachedFinish && !gameEnded)
+        {
+            finishPanel.SetActive(true); // Finish 패널 활성화
             GameSuccess();
+        }
         }
     }
 }

@@ -12,6 +12,7 @@ public class Control : MonoBehaviour
     private float rotationSpeed = 100.0f;
     private Transform playerTr;
     public int itemCount = 0;
+    public bool hasReachedFinish = false; // 결승점 도달 여부
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,12 @@ public class Control : MonoBehaviour
             Debug.Log("아이템 개수: " + itemCount);
 
         }
+         if (other.CompareTag("Finish")) // 결승점 태그가 "Finish"인 경우
+        {
+            hasReachedFinish = true; // 결승점에 도달
+            Debug.Log("결승점에 도달했습니다!");
+        }
     
     }
+
 }
